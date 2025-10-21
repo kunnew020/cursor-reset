@@ -9,14 +9,14 @@ Reset Cursor trial with one command.
 ### One-Line Command
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/cursor-scripts/main/cursor_reset.py | sudo python3
+curl -fsSL https://raw.githubusercontent.com/kunnew020/cursor-reset/main/cursor_reset.py | sudo python3
 ```
 
 ### Manual Download
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/cursor-scripts/main/cursor_reset.py
+curl -O https://raw.githubusercontent.com/kunnew020/cursor-reset/main/cursor_reset.py
 
 # Make it executable
 chmod +x cursor_reset.py
