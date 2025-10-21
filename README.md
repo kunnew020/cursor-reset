@@ -6,11 +6,18 @@ Scripts for managing Cursor IDE.
 
 Reset Cursor trial with one command.
 
-### One-Line Command
+### One-Line Command (Recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kunnew020/cursor-reset/main/cursor_reset.py | sudo python3
+curl -fsSL https://raw.githubusercontent.com/kunnew020/cursor-reset/main/reset.sh | bash
 ```
+
+This command:
+- ✅ Downloads and runs the reset script automatically
+- ✅ Checks system compatibility (macOS only)
+- ✅ Verifies Python 3 installation
+- ✅ Guides you through the reset process interactively
+- ✅ Cleans up automatically after completion
 
 ### Manual Download
 
