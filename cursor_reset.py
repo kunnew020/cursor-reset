@@ -272,7 +272,14 @@ def main():
     print("  • Backup original files (.backup)")
     print("  • NO UI modifications - Cursor appearance unchanged")
     print()
-    response = input(f"{Colors.YELLOW}Continue? (y/N): {Colors.RESET}")
+    # Read from /dev/tty to work when script is piped
+    try:
+        with open('/dev/tty', 'r') as tty:
+            print(f"{Colors.YELLOW}Continue? (y/N): {Colors.RESET}", end='', flush=True)
+            response = tty.readline().strip()
+    except:
+        response = input(f"{Colors.YELLOW}Continue? (y/N): {Colors.RESET}")
+    
     if response.lower() != 'y':
         print_info("Operation cancelled")
         sys.exit(0)
