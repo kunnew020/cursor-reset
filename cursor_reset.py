@@ -69,10 +69,9 @@ def check_cursor_running():
     result = subprocess.run(['pgrep', '-x', 'Cursor'], capture_output=True)
     if result.returncode == 0:
         print_warning("Cursor is currently running!")
-        print_info("Please quit Cursor before running this script.")
-        response = input("Do you want to continue anyway? (y/N): ")
-        if response.lower() != 'y':
-            sys.exit(0)
+        print_info("It's recommended to quit Cursor before continuing.")
+    else:
+        print_success("Cursor is not running")
 
 def generate_new_ids():
     """Generate new machine IDs"""
