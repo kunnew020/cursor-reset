@@ -63,9 +63,9 @@ run_reset() {
     echo -e "${YELLOW}   • Backups will be created automatically${NC}"
     echo ""
     
-    # Run with sudo
+    # Run with sudo (redirect stdin from terminal for interactive prompts)
     echo -e "${CYAN}🔐 Running reset script with admin privileges...${NC}"
-    if sudo python3 "$tmp_script"; then
+    if sudo python3 "$tmp_script" < /dev/tty; then
         echo ""
         echo -e "${GREEN}✅ Reset completed successfully!${NC}"
         echo -e "${CYAN}ℹ️  Please restart Cursor to apply changes${NC}"
